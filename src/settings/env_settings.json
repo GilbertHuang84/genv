@@ -1,0 +1,67 @@
+[
+  {
+    "filter": [],
+    "data": [
+      {
+        "type": "cmd",
+        "system": "windows",
+        "data": [
+          "chcp 65001",
+          "set PYTHONIOENCODING=UTF-8"
+        ]
+      }
+    ]
+  },
+  {
+    "filter": ["name", "is", "usd"],
+    "data": [
+      {
+        "type": "env",
+        "env_key": "PATH",
+        "data": [
+          "D:\\OpenSource\\Compile\\USD\\bin",
+          "D:\\OpenSource\\Compile\\USD\\lib",
+          "D:\\OpenSource\\sources\\dreamworksanimation\\usdmanager\\scripts"
+        ]
+      },
+      {
+        "type": "env",
+        "env_key": "PYTHONPATH",
+        "data": "D:\\OpenSource\\Compile\\USD\\lib\\python"
+      }
+    ]
+  },
+  {
+    "filter": ["name", "in", ["py2", "usd"]],
+    "data": [
+      {
+        "type": "cmd",
+        "system": "windows",
+        "data": [
+          "call D:\\Programs\\anaconda3\\Scripts\\activate.bat D:\\Programs\\anaconda3",
+          "call conda activate usd"
+        ]
+      }
+    ]
+  },
+  {
+    "filter": ["name", "is", "dev"],
+    "data": [
+      {
+        "type": "cmd",
+        "system": "windows",
+        "data": "call \"d:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\Tools\\VsDevCmd.bat\""
+      }
+    ]
+  },
+  {
+    "filter": ["name", "is", "pycharm"],
+    "data": [
+      {
+        "type": "cmd",
+        "system": "windows",
+        "data": "\"D:\\Program Files\\JetBrains\\PyCharm Community Edition 2020.3\\bin\\pycharm64.exe\""
+      }
+    ]
+  }
+]
